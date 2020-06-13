@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MOVIE_APP</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    </head>
+
+    <body>
+        <center><h1>MOVIE APP</h1></center>
+        
+        <button class="tablink" onclick="openPage('Home',this)">HOME</button>
+        <button class="tablink" onclick="openPage('Movies',this)">MOVIES</button>
+        <button class="tablink" onclick="openPage('tv_shows',this)">TV SHOWS</button>
+        <button class="tablink" onclick="openPage('About',this)">ABOUT</button>
+        
+        <div id="Home" class= "tabcontent">
+            <h3>RECOMENED MOVIES AND TV SHOW</h3>
+        </div>
+        
+        <div id="Movies" class= "tabcontent">
+            <h3>LATEST MOVIES</h3>
+        </div>
+        
+        <div id="tv_shows" class="tabcontent">
+            <h3>LATEST TV SHOWS</h3>
+        </div>
+        
+        <div id="About" class= "tabcontent">
+            <h3>MOVIE APP</h3>
+        </div>
+        
+    <script>
+        function openPage(pageName,element){
+            var i,tabcontent,tablinks;
+            tabcontent = document.getElementsByClassName('tabcontent');
+            for(i=0;i<tabcontent.length;i++){
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName('tablink');
+            for(i=0;i<tabcontent.length;i++){
+                tablinks[i].style.backgroundcolor = "";
+
+            }
+
+            document.getElementById(pagename).style.display= "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+    </body>  
+</html>
+
